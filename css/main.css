@@ -28,6 +28,13 @@
 }
 /* --------------- /placeholder --------------- */
 
+@font-face {
+    font-family: "MyriadProRegular";
+    url("../fonts/myriadpro.woff") format("woff"),
+    font-style: normal;
+    font-weight: normal;
+}
+
 /* --------------- site --------------- */
 .site {
     min-height: 100%;
@@ -78,6 +85,10 @@
     height: inherit;
     margin: 0 auto;
 }
+.site__title{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 /* --------------- /site --------------- */
 
 /* --------------- logo --------------- */
@@ -87,3 +98,225 @@
     left: 0;
 }
 /* --------------- /logo --------------- */
+
+/* --------------- questions --------------- */
+.questions__add{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 500px;
+    background: #f3f3f3;
+    padding: 13px 19px 18px;
+}
+.questions__add label {
+    font-size: 14px;
+    color: #313131;
+}
+.questions__add fieldset input {
+    background: #fff;
+    font-size: 18px;
+    padding: 0 10px;
+    width: 250px;
+    height: 41px;
+    border: none;
+    margin-left: 10px;
+}
+.questions__add textarea {
+     background: #fff;
+     font-size: 18px;
+     padding: 10px;
+     width: 100%;
+     height: 157px;
+     border: none;
+     margin: 10px 0 9px 0;
+ }
+.add-questions button[type=submit] {
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    padding: 8px 18px;
+    background: #0845af;
+    -webkit-transition: background 0.3s ease;
+    transition: background 0.3s ease;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+.add-questions button[type=submit]:hover {
+    background: #1d6df8;
+}
+.question__frequently-asked{
+    display: inline-block;
+    vertical-align: top;
+    width: 479px;
+}
+.question__last{
+    margin-top: -10px;
+}
+.question__user{
+    min-height: 90px;
+    background-color: #ede9e0;
+    padding: 8px 19px 10px 20px;
+}
+.question__last p{
+    letter-spacing: 0.18px;
+    margin-bottom: 0;
+}
+.question__admin{
+    margin-bottom: 33px;
+    min-height: 54px;
+}
+.question__admin img{
+    position: relative;
+    left: 19px;
+    margin-right: 29px;
+}
+/* --------------- /questions --------------- */
+
+/* --------------- news-list --------------- */
+.news{
+    position: relative;
+}
+.news__list{
+    padding-bottom: 34px;
+}
+.news__list time{
+    display: block;
+    color: #929292;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.news__content a{
+    display: block;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-decoration: underline;
+}
+.news__content a:hover{
+    text-decoration: none;
+}
+.news__pic{
+    display: inline-block;
+    vertical-align: top;
+    width:240px;
+    height:145px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #dddddd;
+    margin-right: 20px;
+}
+.news__content{
+    display: inline-block;
+    vertical-align: top;
+    width:720px;
+    margin-bottom: 12px;
+}
+.news__content p{
+    font-size: 14px;
+    color: #5c5c5c;
+    line-height: 17px;
+}
+.news__subscribe,
+.news__articles,
+.news__all{
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    background: #003296;
+    padding: 5px 15px;
+    transition: opacity .3s ease;
+    margin-bottom: 20px;
+}
+.news__subscribe:hover,
+.news__articles:hover,
+.news__all:hover{
+    opacity: .7;
+}
+.news__articles{
+    background: #929292;
+}
+.news__subscribe{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #bf0000;
+    padding: 5px 15px 5px 40px;
+}
+.news__subscribe:before{
+    position: absolute;
+    left: 20px;
+    width: 14px;
+    height:14px;
+    content: "";
+    background: url("../img/subscribe.png") no-repeat center;
+}
+/* --------------- /news-list --------------- */
+
+/* --------------- breadcrumbs --------------- */
+.breadcrumbs {
+    font-size: 14px;
+    margin-bottom: 30px;
+    position: relative;
+    margin-top: 7px;
+}
+.breadcrumbs a{
+    position: relative;
+    margin-top: 3px;
+    font-size: 14px;
+    color: #000;
+    text-decoration: underline;
+    margin-right: 14px;
+    cursor: pointer;
+    padding-left: 2px;
+}
+.breadcrumbs a:after{
+    content: '/';
+    position: absolute;
+    top: 2px;
+    right: -10px;
+    color: #5c5c5c;
+}
+.breadcrumbs span{
+    color: #5c5c5c;
+    padding-left: 2px;
+}
+.breadcrumbs a:first-child {
+    padding-left: 0;
+}
+.breadcrumbs a:hover{
+    text-decoration: none;
+}
+/* --------------- /breadcrumbs --------------- */
+
+/* --------------- navigation --------------- */
+.navigation{
+    color:#7d7863;
+    margin: 40px 0 39px 0;
+    width: 400px;
+}
+.navigation a{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "MyriadProRegular", sans-serif;
+    color: #000;
+    font-size: 18px;
+    margin-right: 15px;
+}
+.navigation a.active {
+     color: #003db5;
+     text-decoration: none;
+     display: inline-block;
+ }
+.navigation a:hover{
+    color: #003db5;
+}
+.navigation a:first-child,
+.navigation a:last-child,
+.navigation__next,
+.navigation__prev{
+    margin-top: -2px;
+}
+/* --------------- /navigation --------------- */
