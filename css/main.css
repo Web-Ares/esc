@@ -326,49 +326,57 @@
     position: relative;
     width: 500px;
     background: #f3f3f3;
-    padding: 13px 19px 18px;
+    padding: 13px 19px 20px;
+    margin-bottom: 30px;
+    margin-right: 20px;
 }
 .questions__add label {
-    font-size: 14px;
-    color: #313131;
+    display: block;
+    font-size: 16px;
+    color: #656565;
+    margin-bottom: 5px;
 }
 .questions__add fieldset input {
     background: #fff;
     font-size: 18px;
     padding: 0 10px;
-    width: 250px;
-    height: 41px;
+    width: 260px;
+    height: 31px;
     border: none;
-    margin-left: 10px;
+    margin-bottom: 15px;
 }
 .questions__add textarea {
      background: #fff;
      font-size: 18px;
      padding: 10px;
      width: 100%;
-     height: 157px;
+     height: 140px;
      border: none;
-     margin: 10px 0 9px 0;
+     margin-bottom:20px;
  }
-.add-questions button[type=submit] {
-    color: #fff;
-    border: none;
-    font-size: 12px;
-    padding: 8px 18px;
+.questions__add .questions__subject input{
+    width: 100%;
+}
+.questions__add button[type=submit] {
+    display: block;
+    width: 260px;
     background: #0845af;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 18px;
     -webkit-transition: background 0.3s ease;
     transition: background 0.3s ease;
-    width: auto;
-    display: block;
-    margin: 0 auto;
+
 }
-.add-questions button[type=submit]:hover {
+.questions__add button[type=submit]:hover {
     background: #1d6df8;
 }
 .question__frequently-asked{
     display: inline-block;
     vertical-align: top;
-    width: 479px;
+    width: 475px;
+    margin-bottom: 30px;
 }
 .question__last{
     margin-top: -10px;
@@ -377,6 +385,9 @@
     min-height: 90px;
     background-color: #ede9e0;
     padding: 8px 19px 10px 20px;
+}
+.question__user p strong{
+    display: block;
 }
 .question__last p{
     letter-spacing: 0.18px;
@@ -391,6 +402,26 @@
     left: 19px;
     margin-right: 29px;
 }
+.question__admin p strong{
+    display: block;
+}
+.questions__add-title{
+    position: relative;
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+.questions__add-title:before{
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 16px;
+    height: 18px;
+    background: url("../img/ask-question.png") no-repeat center;
+
+}
 /* --------------- /questions --------------- */
 
 /* --------------- news-list --------------- */
@@ -398,20 +429,21 @@
     position: relative;
 }
 .news__list{
-    padding-bottom: 34px;
+    padding-bottom: 35px;
 }
+.new-news time,
 .news__list time{
     display: block;
     color: #929292;
     font-size: 14px;
-    margin-bottom: 6px;
 }
 .news__content a{
     display: block;
     color: #000;
     font-size: 14px;
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 17px;
+    letter-spacing: -0.3px;
     text-decoration: underline;
 }
 .news__content a:hover{
@@ -426,7 +458,22 @@
     background-position: center;
     border-radius: 5px;
     box-shadow: 0 0 2px #dddddd;
-    margin-right: 20px;
+    margin-right: 35px;
+}
+.new-news__pic{
+    float: left;
+    width:500px;
+    height:278px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 2px #dddddd;
+    margin-right: 35px;
+    margin-bottom: 35px;
+}
+.new-news time{
+    margin-top: -2px;
 }
 .news__content{
     display: inline-block;
@@ -449,6 +496,7 @@
     padding: 5px 15px;
     transition: opacity .3s ease;
     margin-bottom: 20px;
+    margin-left: 1px;
 }
 .news__subscribe:hover,
 .news__articles:hover,
@@ -463,11 +511,11 @@
     top: 0;
     right: 0;
     background: #bf0000;
-    padding: 5px 15px 5px 40px;
+    padding: 5px 9px 5px 45px;
 }
 .news__subscribe:before{
     position: absolute;
-    left: 20px;
+    left: 23px;
     width: 14px;
     height:14px;
     content: "";
@@ -477,10 +525,10 @@
 
 /* --------------- breadcrumbs --------------- */
 .breadcrumbs {
-    font-size: 14px;
-    margin-bottom: 30px;
     position: relative;
+    font-size: 14px;
     margin-top: 7px;
+    margin-bottom: 28px;
 }
 .breadcrumbs a{
     position: relative;
@@ -488,7 +536,7 @@
     font-size: 14px;
     color: #000;
     text-decoration: underline;
-    margin-right: 14px;
+    margin-right: 19px;
     cursor: pointer;
     padding-left: 2px;
 }
@@ -496,7 +544,7 @@
     content: '/';
     position: absolute;
     top: 2px;
-    right: -10px;
+    right: -16px;
     color: #5c5c5c;
 }
 .breadcrumbs span{
@@ -514,7 +562,7 @@
 /* --------------- navigation --------------- */
 .navigation{
     color:#7d7863;
-    margin: 40px 0 39px 0;
+    margin: 11px 0 39px 0;
     width: 400px;
 }
 .navigation a{
@@ -523,7 +571,8 @@
     font-family: "MyriadProRegular", sans-serif;
     color: #000;
     font-size: 18px;
-    margin-right: 15px;
+    font-weight: 700;
+    margin-right: 13.5px;
 }
 .navigation a.active {
      color: #003db5;
