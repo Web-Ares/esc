@@ -8,8 +8,9 @@
     <meta name="format-detection" content="address=no">
 
     <title>Title</title>
+    <link rel="stylesheet" href="css/swiper.min.css" />
     <link rel="stylesheet" href="css/main.css" />
-    
+
 </head>
 <body>
     <!-- site -->
@@ -20,46 +21,58 @@
 
             <!-- header-navigation -->
             <div class="header-navigation">
-                <a href="#">О компании</a>
-                <a href="#">Сотрудничество</a>
-                <a href="#">Справка</a>
-                <a href="#">Статьи и новости</a>
-                <a href="#">Контакты</a>
+
+                <!-- header-navigation__layout -->
+                <div class="header-navigation__layout">
+                    <a href="#">О компании</a>
+                    <a href="#">Сотрудничество</a>
+                    <a href="#">Справка</a>
+                    <a href="#">Статьи и новости</a>
+                    <a href="#">Контакты</a>
+                </div>
+                <!-- /header-navigation__layout -->
+
             </div>
             <!-- /header-navigation -->
 
-            <!-- logo -->
-            <h1 class="logo">
-                <img src="img/logo.png" width="" height="" alt="">
-            </h1>
-            <!-- /logo -->
+            <!-- site__header-layout -->
+            <div class="site__header-layout">
 
-            <!-- callback -->
-            <div class="callback">
-                <a href="tel:+7 (495) 374-94-72" class="callback__phone">+7 (495) 374-94-72</a>
-                <a href="#">Заказать звонок</a>
+                <!-- logo -->
+                <h1 class="logo">
+                    <img src="img/logo.png" width="" height="" alt="">
+                </h1>
+                <!-- /logo -->
+
+                <!-- callback -->
+                <div class="callback">
+                    <a href="tel:+7 (495) 374-94-72" class="callback__phone">+7 (495) 374-94-72</a>
+                    <a href="#">Заказать звонок</a>
+                </div>
+                <!-- /callback -->
+
+                <!-- phones -->
+                <dl class="phones">
+                    <dt><span>Москва</span></dt>
+                    <dd>+7 (495) 374-94-72</dd>
+                    <dt><span>Самара</span></dt>
+                    <dd>+7 (495) 374-94-72</dd>
+                    <dt><span>Новосибирск</span></dt>
+                    <dd>+7 (495) 374-94-72</dd>
+                </dl>
+                <!-- /phones -->
+
+                <!-- social -->
+                <div class="social">
+                    <a href="#" class="social__vk"></a>
+                    <a href="#" class="social__ig"></a>
+                    <a href="#" class="social__fb"></a>
+                    <a href="#" class="social__ok"></a>
+                </div>
+                <!-- /social -->
+
             </div>
-            <!-- /callback -->
-
-            <!-- phones -->
-            <dl class="phones">
-                <dt><span>Москва</span></dt>
-                <dd>+7 (495) 374-94-72</dd>
-                <dt><span>Самара</span></dt>
-                <dd>+7 (495) 374-94-72</dd>
-                <dt><span>Новосибирск</span></dt>
-                <dd>+7 (495) 374-94-72</dd>
-            </dl>
-            <!-- /phones -->
-
-            <!-- social -->
-            <div class="social">
-                <a href="#" class="social__vk"></a>
-                <a href="#" class="social__ig"></a>
-                <a href="#" class="social__fb"></a>
-                <a href="#" class="social__ok"></a>
-            </div>
-            <!-- /social -->
+            <!-- /site__header-layout -->
 
             <!-- header__menu -->
             <nav class="header__menu">
@@ -74,7 +87,6 @@
 
             <!-- site__wrap -->
             <div class="site__wrap">
-
 
             </div>
             <!-- /site__wrap -->
@@ -94,6 +106,7 @@
     </div>
     <!-- /site -->
     <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/jquery.main.js"></script>
 </body>
 </html>

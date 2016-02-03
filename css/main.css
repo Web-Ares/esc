@@ -94,10 +94,31 @@
 /* --------------- logo --------------- */
 .logo {
     position: absolute;
-    top: 0;
+    top: 9px;
     left: 0;
 }
 /* --------------- /logo --------------- */
+
+/* --------------- header-navigation --------------- */
+.header-navigation{
+    background-color: #f0f0f0;
+    text-align: right;
+}
+.header-navigation a{
+    display: inline-block;
+    height: 30px;
+    margin-left: 21px;
+    padding-top: 6px;
+    color: #000;
+}
+.header-navigation a:hover{
+    text-decoration: underline;
+}
+.header-navigation__layout{
+    width: 1000px;
+    margin: 0 auto;
+}
+/* --------------- /header-navigation --------------- */
 
 /* --------------- questions --------------- */
 .questions__add{
