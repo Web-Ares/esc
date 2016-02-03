@@ -240,6 +240,56 @@
 }
 /* --------------- /site --------------- */
 
+/* --------------- contacts --------------- */
+
+.contacts__item{
+    color: #5c5c5c;
+    margin-bottom: 25px;
+}
+.contacts__item h1{
+    margin-bottom: 21px;
+    color: #000;
+}
+.contacts__item h2{
+    color: #000;
+}
+.contact__gallery{
+    width: 670px;
+    margin-bottom: 40px;
+}
+.contact__gallery h2{
+    margin-bottom: 18px;
+}
+.contact__gallery-item:last-child{
+    margin-right: 0;
+}
+.contact__gallery-item{
+    display: inline-block;
+    width: 200px;
+    height: 160px;
+    background-size: cover;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+.contacts__item span{
+    display: block;
+    margin-bottom: 5px;
+}
+.contact__map{
+    padding-top: 18px;
+    margin-bottom: 29px;
+}
+
+.contact__map h2{
+    margin-bottom: 19px;
+}
+.map__wrap {
+    position: relative;
+    width: 670px;
+    height: 300px;
+}
+/* --------------- /contacts --------------- */
+
 /* --------------- logo --------------- */
 .logo {
     position: absolute;
