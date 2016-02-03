@@ -288,6 +288,69 @@
     width: 670px;
     height: 300px;
 }
+.contact__form{
+    width: 300px;
+    padding: 13px 19px 0;
+    background: #f0f0f0;
+    margin: 0 auto;
+}
+.contact__form h2{
+    position: relative;
+    font-size: 18px;
+    margin-left: 26px;
+    margin-bottom: 6px;
+}
+.contact__form h2:before{
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 18px;
+    left: -24px;
+    top: 1px;
+    background: url("../img/form_image.png");
+}
+.contact__form fieldset label{
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    padding-left: 12px;
+    margin-bottom: 5px;
+}
+.contact__form fieldset{
+    margin-bottom: 16px;
+}
+.contact__form fieldset input, .contact__form fieldset textarea{
+    width: 260px;
+    height: 30px;
+    padding: 0 10px;
+    border: none;
+}
+.contact__form fieldset textarea{
+    height: 140px;
+}
+.contact__email{
+    display: block;
+    background: #063ba8;
+    color: #fff;
+    text-decoration: underline;
+    width: 209px;
+    margin: 0 auto 36px;
+    padding: 3px 0 8px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+}
+.contact__form button{
+    width: 100%;
+    background: #0539a5;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    padding: 7px 0 6px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
 /* --------------- /contacts --------------- */
 
 /* --------------- logo --------------- */
