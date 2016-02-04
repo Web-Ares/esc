@@ -36,9 +36,45 @@ $(function(){
 
 } );
 
+var Tabs = function(obj) {
 
+    //private properties
+    var _self = this,
+        _tabs = obj.find('.tabs__links > a'),
+        _wraps = obj.find('.tabs__content > div'),
+        _i = 0,
+        _obj = obj;
 
+    //private methods
+    var _addEvents = function() {
+            showPages = function(i) {
+                _wraps.hide().removeClass("active");
+                _wraps.eq(i).show(100).addClass('active');
+                _tabs.removeClass("active");
+                _tabs.eq(i).addClass("active");
+            };
 
+            showPages(0);
+
+            _tabs.each(function(index, element) {
+                $(element).attr("data-page", _i);
+                _i++;
+            });
+
+            _tabs.click(function() {
+                showPages(parseInt($(this).attr("data-page")));
+            });
+        },
+        _init = function() {
+            _addEvents();
+        };
+
+    //public properties
+
+    //public methods
+
+    _init();
+};
 
 var Slider = function (obj) {
 

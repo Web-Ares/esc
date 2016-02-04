@@ -23,13 +23,30 @@
             <div class="header-navigation">
 
                 <!-- header-navigation__layout -->
-                <div class="header-navigation__layout">
-                    <a href="#">О компании</a>
-                    <a href="#">Сотрудничество</a>
-                    <a href="#">Справка</a>
-                    <a href="#">Статьи и новости</a>
-                    <a href="#">Контакты</a>
-                </div>
+                <ul class="header-navigation__layout">
+                    <li class="header-navigation__sub">
+                        <a href="#">О компании</a>
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Пункт №1</a></li>
+                            <li><a href="#">Пункт №2</a></li>
+                        </ul>
+                    </li cl
+                            >
+                    <li><a href="#">Сотрудничество</a></li>
+                    <li class="header-navigation__sub">
+                        <a href="#">Справка</a>
+                        <ul>
+                            <li><a href="#">Справочная информация</a></li>
+                            <li><a href="#">Вопрос-ответ</a></li>
+                            <li><a href="#">Стоимость работ</a></li>
+                            <li><a href="#">Пункт №1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Статьи и новости</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
                 <!-- /header-navigation__layout -->
 
             </div>
@@ -47,7 +64,7 @@
                 <!-- callback -->
                 <div class="callback">
                     <a href="tel:+7 (495) 374-94-72" class="callback__phone">+7 (495) 374-94-72</a>
-                    <a href="#">Заказать звонок</a>
+                    <a href="#" class="callback__btn">Заказать звонок</a>
                 </div>
                 <!-- /callback -->
 
@@ -103,6 +120,7 @@
             <!-- /site__footer-layout -->
         </footer>
         <!-- /site__footer -->
+
     </div>
     <!-- /site -->
     <script src="js/jquery-2.1.3.min.js"></script>

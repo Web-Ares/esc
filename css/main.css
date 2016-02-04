@@ -64,7 +64,7 @@
 .site__header-layout{
     position: relative;
     width: 1000px;
-    height: inherit;
+    height: 90px;
     margin: 0 auto;
 }
 .site__content {
@@ -241,7 +241,6 @@
 /* --------------- /site --------------- */
 
 /* --------------- contacts --------------- */
-
 .contacts__item{
     color: #5c5c5c;
     margin-bottom: 25px;
@@ -375,13 +374,63 @@
 .header-navigation{
     background-color: #f0f0f0;
     text-align: right;
+    white-space: nowrap;
+}
+.header-navigation__sub a{
+    padding-right: 5px;
+}
+.header-navigation__sub > a:after{
+    top: 50%;
+    left: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(25, 25, 25, 0);
+    border-top-color: #191919;
+    border-width: 7px 3px 0 3px;
+    margin-top: -4px;
+    transition: transform .3s ease;
+    -webkit-transition: transform .3s ease;
+}
+.header-navigation__sub:hover a:after{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+.header-navigation__layout > li{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 21px;
+}
+.header-navigation__layout li ul{
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    min-width: 150px;
+    padding: 0 20px 10px;
+    background-color: #f0f0f0;
+    text-align: left;
+    z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .3s ease, opacity .3s ease;
+    -webkit-transition: visibility .3s ease, opacity .3s ease;
+}
+.header-navigation__layout li:hover ul{
+    visibility: visible;
+    opacity: 1;
 }
 .header-navigation a{
     display: inline-block;
     height: 30px;
-    margin-left: 21px;
     padding-top: 6px;
     color: #000;
+}
+.header-navigation__layout li ul a{
+    height: 20px;
 }
 .header-navigation a:hover{
     text-decoration: underline;
@@ -390,7 +439,137 @@
     width: 1000px;
     margin: 0 auto;
 }
+.header__navigation{
+    width: 100%;
+    height: 95px;
+    background-color: #f0f0f0;
+}
+.header__menu{
+    height: 95px;
+    background-color: #f0f0f0;
+}
 /* --------------- /header-navigation --------------- */
+
+/* --------------- callback --------------- */
+.callback{
+    position: absolute;
+    top: 18px;
+    left: 521px;
+    width: 140px;
+    text-align: center;
+    line-height: 24px;
+}
+.callback__phone{
+    font-size: 14px;
+    color: #656565;
+    cursor: default;
+}
+.callback__btn{
+    font-size: 18px;
+    color: #bf0101;
+    border-bottom: 2px dotted #bf0101;
+    transition: border-bottom-color .3s ease;
+    -webkit-transition: border-bottom-color .3s ease;
+}
+.callback__btn:hover{
+    border-bottom-color: transparent;
+}
+/* --------------- /callback --------------- */
+
+/* --------------- phones --------------- */
+.phones{
+    position: absolute;
+    top: 22px;
+    left: 700px;
+    width: 209px;
+    font-size: 12px;
+    color: #656565;
+    text-align: justify;
+}
+.phones a{
+    color: #656565;
+    cursor: default;
+}
+.phones dt, .phones dd{
+    display: inline-block;
+    vertical-align: middle;
+}
+.phones dt{
+    position: relative;
+    width: 108px;
+    overflow: hidden;
+}
+.phones dt span{
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+}
+.phones dt:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    white-space: nowrap;
+    content: '. . . . . . . . . . . . . . . . . .';
+}
+/* --------------- /phones --------------- */
+
+/* --------------- social --------------- */
+.social{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 50px;
+    text-align: justify;
+}
+.social:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+.social a{
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-bottom: 6px;
+    background-image: url("../img/social.png");
+    background-repeat: no-repeat;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.social a:hover{
+    opacity: .7;
+}
+.social__vk{
+    background-position: 0 0;
+}
+.social__fb{
+    background-position: 0 -30px;
+}
+.social__ig{
+    background-position: -30px 0;
+}
+.social__ok{
+    background-position: -30px -30px;
+}
+/* --------------- /social --------------- */
+
+/* --------------- search --------------- */
+.search{
+    position: absolute;
+}
+.search__text{
+    width: 500px;
+    border: 1px solid #e2e2e2;
+}
+.search__btn{
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #002a7e;
+    border-radius: 3px;
+    background: url("../img/icons-lupa.png") no-repeat 50% 50% #0339a4;
+}
+/* --------------- /search --------------- */
 
 /* --------------- questions --------------- */
 .question h1{
@@ -695,7 +874,7 @@
 /* --------------- navigation --------------- */
 .navigation{
     color:#7d7863;
-    margin: 11px 0 39px 0;
+    margin: 40px 0 39px 0;
     width: 400px;
 }
 .navigation a{
@@ -704,14 +883,13 @@
     font-family: "MyriadProRegular", sans-serif;
     color: #000;
     font-size: 18px;
-    font-weight: 700;
-    margin-right: 13.5px;
+    margin-right: 15px;
 }
 .navigation a.active {
-     color: #003db5;
-     text-decoration: none;
-     display: inline-block;
- }
+    color: #003db5;
+    text-decoration: none;
+    display: inline-block;
+}
 .navigation a:hover{
     color: #003db5;
 }
@@ -722,6 +900,7 @@
     margin-top: -2px;
 }
 /* --------------- /navigation --------------- */
+
 /* --------------- feedback --------------- */
 .feedback{
     display: block;
