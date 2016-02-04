@@ -88,6 +88,13 @@
         <!-- site__wrap -->
         <div class="site__wrap">
 
+            <!-- breadcrumbs -->
+            <div class="breadcrumbs">
+                <a href="#">Главная</a>
+                <span>Контакты</span>
+            </div>
+            <!-- /breadcrumbs -->
+
             <!--contacts-->
             <div class="contacts">
 
@@ -186,32 +193,34 @@
             </div>
             <!--/contacts-->
 
+            <aside class="aside">
+                <form class="contact__form">
+                    <h2>Письмо руководителю</h2>
+                    <span class="contact__email">mail@eurasiancc.com</span>
+                    <fieldset>
+                        <label for="name">ФИО*</label>
+                        <input type="text" id="name" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="email">Почта*</label>
+                        <input type="text" id="email" required>
+                    </fieldset>
+                    <fieldset>
+                        <label for="tel">Телефон</label>
+                        <input type="text" id="tel">
+                    </fieldset>
+                    <fieldset>
+                        <label for="comm">Ваше письмо</label>
+                        <textarea id="comm"></textarea>
+                    </fieldset>
+                    <button type="submit">Оптравить письмо</button>
+                </form>
+            </aside>
+
         </div>
         <!-- /site__wrap -->
 
-        <aside>
-            <form class="contact__form">
-                <h2>Письмо руководителю</h2>
-                <span class="contact__email">mail@eurasiancc.com</span>
-                <fieldset>
-                    <label for="name">ФИО*</label>
-                    <input type="text" id="name" required>
-                </fieldset>
-                <fieldset>
-                    <label for="email">Почта*</label>
-                    <input type="text" id="email" required>
-                </fieldset>
-                <fieldset>
-                    <label for="tel">Телефон</label>
-                    <input type="text" id="tel">
-                </fieldset>
-                <fieldset>
-                    <label for="comm">Ваше письмо</label>
-                    <textarea id="comm"></textarea>
-                </fieldset>
-                <button type="submit">Оптравить письмо</button>
-            </form>
-        </aside>
+
     </div>
     <!-- /site__content -->
 
