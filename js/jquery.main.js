@@ -4,37 +4,39 @@ $(function(){
         Slider($(this));
     });
 
+    var myMap;
 
-
-var myMap;
-
-function init () {
-    myMap = new ymaps.Map('map', {
-        center: $('.map__item').eq(0).attr('data-coord').split(', '),
-        zoom: 9
-    });
-    myMap.controls
-        .add('zoomControl', { left: 5, bottom: 5 })
-        .add('typeSelector')
-        .add('mapTools', { left: 35, bottom: 5 });
+    function init () {
+        myMap = new ymaps.Map('map', {
+            center: $('.map__item').eq(0).attr('data-coord').split(', '),
+            zoom: 9
+        });
+        myMap.controls
+            .add('zoomControl', { left: 5, bottom: 5 })
+            .add('typeSelector')
+            .add('mapTools', { left: 35, bottom: 5 });
 
 
 
-    myMap.behaviors.disable('drag');
+        myMap.behaviors.disable('drag');
 
-}
-
-ymaps.ready(init);
-
-$('.map__item span').on({
-    'click':function(){
-        var coord = $(this).parent().attr('data-coord').split(', ');
-
-        myMap.setCenter(coord);
-
-        return false;
     }
-});
+
+    ymaps.ready(init);
+
+    $('.map__item span').on({
+        'click':function(){
+            var coord = $(this).parent().attr('data-coord').split(', ');
+
+            myMap.setCenter(coord);
+
+            return false;
+        }
+    });
+
+} );
+
+
 
 
 
@@ -54,6 +56,16 @@ var Slider = function (obj) {
         _init = function () {
             _addEvents();
         };
+    if (_obj.hasClass('feedback__wrap')) {
+        var _slider1 = new Swiper(_obj, {
+            nextButton: '.feedback__prev',
+            prevButton: '.feedback__next',
+            loop: true,
+            paginationClickable: true
+
+        });
+
+    }
     if (_obj.hasClass('promo__slider')) {
         var _swiper = new Swiper(_obj, {
             slidesPerView: 1,
@@ -70,4 +82,3 @@ var Slider = function (obj) {
 
     _init();
 };
-} );
