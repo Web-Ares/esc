@@ -4,38 +4,12 @@ $(function(){
         Slider($(this));
     });
 
-    $('.tabs').each(function() {
-        Tabs($(this));
+    $('.map').each(function() {
+        Map($(this));
     });
 
-    var myMap;
-
-    function init () {
-        myMap = new ymaps.Map('map', {
-            center: $('.map__item').eq(0).attr('data-coord').split(', '),
-            zoom: 9
-        });
-        myMap.controls
-            .add('zoomControl', { left: 5, bottom: 5 })
-            .add('typeSelector')
-            .add('mapTools', { left: 35, bottom: 5 });
-
-
-
-        myMap.behaviors.disable('drag');
-
-    }
-
-    //ymaps.ready(init);
-
-    $('.map__item span').on({
-        'click':function(){
-            var coord = $(this).parent().attr('data-coord').split(', ');
-
-            myMap.setCenter(coord);
-
-            return false;
-        }
+    $('.tabs').each(function() {
+        Tabs($(this));
     });
 
 } );
@@ -78,6 +52,57 @@ var Tabs = function(obj) {
     //public methods
 
     _init();
+};
+
+var Map = function(obj){
+
+    var myMap;
+
+    function init () {
+        myMap = new ymaps.Map('map', {
+            center: $('.map__item').eq(0).attr('data-coord').split(', '),
+            zoom: 8
+        });
+        myMap.controls
+            .add('zoomControl', { left: 5, bottom: 5 })
+            .add('typeSelector')
+            .add('mapTools', { left: 35, bottom: 5 });
+
+
+
+        myMap.behaviors.disable('drag');
+
+        $.each($('.map__item'), function(i){
+            var curElem = $(this);
+
+            if (curElem.attr('data-coord')) {
+                var coord = curElem.attr('data-coord').split(', ');
+
+                myMap.geoObjects.add(new ymaps.Placemark(
+                    [coord[0], coord[1]],
+                    {   hintContent: "Описание",
+                        balloonContentBody: curElem.find('a').text() }, {
+                        iconLayout: 'default#image',
+                        iconImageOffset: [-15, -25]
+                    }
+
+                ));
+            }
+        });
+    }
+
+    ymaps.ready(init);
+
+    $('.map__item span').on({
+        'click':function(){
+            var coord = $(this).parent().attr('data-coord').split(', ');
+
+            myMap.setCenter(coord);
+
+            return false;
+        }
+    });
+
 };
 
 var Slider = function (obj) {
