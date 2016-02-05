@@ -20,7 +20,7 @@
         <header class="site__header">
 
             <!-- header-navigation -->
-            <div class="header-navigation">
+            <nav class="header-navigation">
 
                 <!-- header-navigation__layout -->
                 <ul class="header-navigation__layout">
@@ -32,8 +32,7 @@
                             <li><a href="#">Пункт №1</a></li>
                             <li><a href="#">Пункт №2</a></li>
                         </ul>
-                    </li cl
-                            >
+                    </li>
                     <li><a href="#">Сотрудничество</a></li>
                     <li class="header-navigation__sub">
                         <a href="#">Справка</a>
@@ -49,7 +48,7 @@
                 </ul>
                 <!-- /header-navigation__layout -->
 
-            </div>
+            </nav>
             <!-- /header-navigation -->
 
             <!-- site__header-layout -->
@@ -92,10 +91,69 @@
             <!-- /site__header-layout -->
 
             <!-- header__menu -->
-            <nav class="header__menu">
-                <a href="#"></a>
-            </nav>
+            <div class="header__menu tabs">
+
+                <!-- header__menu-layout -->
+                <div class="header__menu-layout">
+
+                    <!-- statistic__tabs -->
+                    <div class="header__menu-tabs tabs__links">
+                        <a href="#">По видам</a>
+                        <a href="#">По отраслям</a>
+                    </div>
+                    <!-- statistic__tabs -->
+
+                    <!-- search -->
+                    <div class="search">
+                        <input type="search" name="search__text" class="search__text" id="search__text" placeholder="Поиск на сайте"/>
+                        <button name="search__btn" class="search__btn"></button>
+                    </div>
+                    <!-- /search -->
+
+                </div>
+                <!-- statistic__tabs -->
+
+                <!-- header__menu-wrap -->
+                <div class="header__menu-wrap">
+
+                    <!-- header__menu-layout -->
+                    <div class="header__menu-layout">
+
+                        <!-- statistic__tabs -->
+                        <div class="statistic__tabs tabs__content">
+
+                            <div>
+
+                                <a href="#">Подтверждение соответствия ТР ТС</a>
+                                <a href="#">Системы менеджмента качества ISO</a>
+                                <a href="#">Пожарная безопасность</a>
+                                <a href="#">Промышленная безопасность</a>
+                                <a href="#">Охрана труда</a>
+                                <a href="#">Испытания</a>
+                                <a href="#">Экспертиза</a>
+                                <a href="#">Оценка</a>
+
+                            </div>
+
+                            <div>
+
+                                <a href="#">Подтверждение соответствия ТР ТС</a>
+                                <a href="#">Системы менеджмента качества ISO</a>
+
+                            </div>
+
+                        </div>
+                        <!-- statistic__tabs -->
+
+                    </div>
+                    <!-- /header__menu-layout -->
+
+                </div>
+                <!-- /header__menu-wrap -->
+
+            </div>
             <!-- /header__menu -->
+
         </header>
         <!-- /site__header -->
 
@@ -105,8 +163,292 @@
             <!-- site__wrap -->
             <div class="site__wrap">
 
+                <!-- promo__slider -->
+                <div class="promo__slider swiper-container">
+
+                    <!-- swiper-wrapper -->
+                    <div class="swiper-wrapper">
+
+                        <!-- swiper-slide -->
+                        <div class="swiper-slide" style="background-image: url('pic/slide-001.jpg')">
+
+                            <!-- site__content-layout -->
+                            <div class="site__content-layout">
+
+                                <!-- promo__content -->
+                                <div class="promo__content">
+
+                                    <!-- promo__title -->
+                                    <h2 class="promo__title">
+                                        Системы менеджмента качества
+                                        <span>ISO</span>
+                                    </h2>
+                                    <!-- /promo__title -->
+
+                                </div>
+                                <!-- /promo__content -->
+
+                            </div>
+                            <!-- /site__content-layout -->
+
+                        </div>
+                        <!-- /swiper-slide -->
+
+                        <!-- swiper-slide -->
+                        <div class="swiper-slide" style="background-image: url('pic/slide-001.jpg')">
+
+                            <!-- site__content-layout -->
+                            <div class="site__content-layout">
+
+                                <!-- promo__content -->
+                                <div class="promo__content">
+
+                                    <!-- promo__title -->
+                                    <h2 class="promo__title">
+                                        Системы менеджмента качества
+                                        <span>ISO</span>
+                                    </h2>
+                                    <!-- /promo__title -->
+
+                                </div>
+                                <!-- /promo__content -->
+
+                            </div>
+                            <!-- /site__content-layout -->
+
+                        </div>
+                        <!-- /swiper-slide -->
+
+                    </div>
+                    <!-- /swiper-wrapper -->
+
+                    <!-- swiper-button-prev -->
+                    <div class="swiper-button-prev button_prev"></div>
+                    <!-- /swiper-button-prev -->
+
+                    <!-- swiper-button-next -->
+                    <div class="swiper-button-next button_next"></div>
+                    <!-- /swiper-button-next -->
+
+                    <!-- swiper-pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- /swiper-pagination -->
+
+                    <!-- promo__form -->
+                    <div class="promo__form">
+                        <h3 class="promo__topic">
+                            Есть вопросы или предложения?
+                            <span class="promo__topic-main">Напишите нам!</span>
+                        </h3>
+                        <form method="get" action="#">
+                            <fieldset>
+                                <label form="promo__name">Ваше имя или организация</label>
+                                <input type="text" name="promo__name" class="promo__name" id="promo__name" required/>
+                            </fieldset>
+                            <fieldset>
+                                <label form="promo__email">E-mail</label>
+                                <input type="email" name="promo__email" class="promo__email" id="promo__email" required/>
+                            </fieldset>
+                            <fieldset>
+                                <label form="promo__message">Сообщение</label>
+                                <textarea name="promo__message" class="promo__message" id="promo__message"></textarea>
+                            </fieldset>
+                            <button class="promo__send">Отправить</button>
+                        </form>
+                    </div>
+                    <!-- /promo__form -->
+
+                </div>
+                <!-- /promo__slider -->
+
+                <!-- index-text -->
+                <div class="index-text">
+                    <h2>Аккредитованный орган по сертификации ECC</h2>
+                    <p>Компания «ECC» — является крупнейшим органом по сертификации продукции и услуг в России, аккредитованный при Росаккредитации, Ростехнадзоре и системе ГАЗПРОМСЕРТ. Основан в 1996 году и на сегодняшний день является ведущей российской компанией по сертификации продукции в системах: ISOCEГОСТ-РГАЗПРОМСЕРТТР ТС.</p>
+                    <p>В структуру компании входят:</p>
+                    <ul>
+                        <li>отдел экспертизы промышленной безопасности (ЭПБ);</li>
+                        <li>современные испытательные лаборатории;</li>
+                        <li>отдел метрологии;</li>
+                        <li>отдел по внедрению систем менеджмента;</li>
+                        <li>консалтинг ISO;</li>
+                        <li>пожарная безопасность и энергоаудит;</li>
+                        <li>отдел разработки технической документации;</li>
+                        <li>учебный центр профессионального образования.</li>
+                    </ul>
+                    <p>Оперативную и качественную работу обеспечивают более 950 квалифицированных сотрудников компании: аттестованных экспертов, обученных специалистов и менеджеров.</p>
+                    <p>За годы работы были выполнены свыше 100 тысяч заказов. Проведена сертификация для предприятий топливно-энергетической, строительной, металлургической, автомобильной отраслей. Среди наших постоянных клиентов: ОАО «Газпром», ЗАО «Донской табак», ООО «НЕФТЕГАЗ», ООО «КЗ «Ростсельмаш», «Ростовская АЭС», ОАО «ТД ГУМ», ИКЕА (IKEA), ОАО «МОСЭНЕРГО», Завод L'OREAL, SIEMENS.</p>
+                    <p>Наличие региональных филиалов во всех промышленных центрах России позволяет максимально быстро выполнять работы для отечественных производственных предприятий. Международные представительства позволяют иностранным производителям максимально быстро получить возможность выхода на рынки Таможенного Союза.</p>
+                </div>
+                <!-- /index-text -->
+
+                <!-- gratitude -->
+                <aside class="gratitude">
+                    Благодарственные письма клиентов
+
+                    <!--swiper-container-->
+                    <div class="swiper-container feedback__wrap">
+
+                        <!--feedback__wrap-->
+                        <div class="swiper-wrapper">
+
+                            <!--feedback-->
+                            <div class="swiper-slide feedback">
+
+                                <!--feedback-item-->
+                                <div class="feedback-item">
+
+                                    <h2>ООО «РЖД»</h2>
+
+                                    <!--feedback-item-image-->
+                                    <div class="feedback-item-image" style="background-image: url(pic/philips.png)"></div>
+                                    <!--/feedback-item-image-->
+
+                                    <p>Идейные соображения высшего порядка, а также консультация с широким активом позволяет
+                                        оценить значение системы обучения кадров, соответствует насущным потребностям.
+                                        Повседневная практика показывает, что начало повседневной работы по формированию
+                                        позиции требуют определения и уточнения существенных финансовых и административных
+                                        условий. Таким образом постоянный количественный рост и сфера нашей активности
+                                        способствует подготовки и реализации форм развития. Идейные соображения высшего
+                                        порядка, а также консультация с широким активом представляет собой интересный
+                                        эксперимент проверки дальнейших направлений развития.</p>
+
+                                </div>
+                                <!--/feedback-item-->
+
+                            </div>
+                            <!--/feedback-->
+
+                            <!--feedback-->
+                            <div class="swiper-slide feedback">
+
+                                <!--feedback-item-->
+                                <div class="feedback-item">
+
+                                    <h2>ООО «РЖД»</h2>
+
+                                    <!--feedback-item-image-->
+                                    <div class="feedback-item-image" style="background-image: url(pic/philips.png)"></div>
+                                    <!--/feedback-item-image-->
+
+                                    <p>Идейные соображения высшего порядка, а также консультация с широким активом позволяет
+                                        оценить значение системы обучения кадров, соответствует насущным потребностям.
+                                        Повседневная практика показывает, что начало повседневной работы по формированию
+                                        позиции требуют определения и уточнения существенных финансовых и административных
+                                        условий. Таким образом постоянный количественный рост и сфера нашей активности
+                                        способствует подготовки и реализации форм развития. Идейные соображения высшего
+                                        порядка, а также консультация с широким активом представляет собой интересный
+                                        эксперимент проверки дальнейших направлений развития.</p>
+
+                                </div>
+                                <!--/feedback-item-->
+
+                            </div>
+                            <!--/feedback-->
+
+                            <!--feedback-->
+                            <div class="swiper-slide feedback">
+
+                                <!--feedback-item-->
+                                <div class="feedback-item">
+
+                                    <h2>ООО «РЖД»</h2>
+
+                                    <!--feedback-item-image-->
+                                    <div class="feedback-item-image" style="background-image: url(pic/philips.png)"></div>
+                                    <!--/feedback-item-image-->
+
+                                    <p>Идейные соображения высшего порядка, а также консультация с широким активом позволяет
+                                        оценить значение системы обучения кадров, соответствует насущным потребностям.
+                                        Повседневная практика показывает, что начало повседневной работы по формированию
+                                        позиции требуют определения и уточнения существенных финансовых и административных
+                                        условий. Таким образом постоянный количественный рост и сфера нашей активности
+                                        способствует подготовки и реализации форм развития. Идейные соображения высшего
+                                        порядка, а также консультация с широким активом представляет собой интересный
+                                        эксперимент проверки дальнейших направлений развития.</p>
+
+                                </div>
+                                <!--/feedback-item-->
+
+                            </div>
+                            <!--/feedback-->
+
+                        </div>
+                        <!--/feedback__wrap-->
+
+                        <!--feedback__controll-->
+                        <div class="feedback__controll">
+                            <div class="feedback__prev"></div>
+                            <div class="feedback__next"></div>
+                        </div>
+                        <!--/feedback__controll-->
+
+                    </div>
+                    <!--/swiper-container-->
+
+                </aside>
+                <!-- /gratitude -->
+
             </div>
             <!-- /site__wrap -->
+
+            <!-- partner -->
+            <div class="partner">
+
+                <!-- site__wrap -->
+                <div class="site__wrap">
+
+                    <h2 class="partner__title">партнеры</h2>
+
+                    <!-- partner__slider -->
+                    <div class="partner__slider swiper-container">
+
+                        <!-- swiper-wrapper -->
+                        <div class="swiper-wrapper">
+
+                            <!-- swiper-slide -->
+                            <div class="swiper-slide" style="background-image: url('pic/img-001.jpg')"></div>
+                            <!-- /swiper-slide -->
+
+                            <!-- swiper-slide -->
+                            <div class="swiper-slide" style="background-image: url('pic/img-002.jpg')"></div>
+                            <!-- /swiper-slide -->
+
+                            <!-- swiper-slide -->
+                            <div class="swiper-slide" style="background-image: url('pic/img-003.jpg')"></div>
+                            <!-- /swiper-slide -->
+
+                            <!-- swiper-slide -->
+                            <div class="swiper-slide" style="background-image: url('pic/img-004.jpg')"></div>
+                            <!-- /swiper-slide -->
+
+                            <!-- swiper-slide -->
+                            <div class="swiper-slide" style="background-image: url('pic/img-005.jpg')"></div>
+                            <!-- /swiper-slide -->
+
+                            <!-- swiper-slide -->
+                            <div class="swiper-slide" style="background-image: url('pic/img-001.jpg')"></div>
+                            <!-- /swiper-slide -->
+
+                        </div>
+                        <!-- /swiper-wrapper -->
+
+                        <!-- swiper-button-prev -->
+                        <div class="swiper-button-prev button_prev"></div>
+                        <!-- /swiper-button-prev -->
+
+                        <!-- swiper-button-next -->
+                        <div class="swiper-button-next button_next"></div>
+                        <!-- /swiper-button-next -->
+
+                    </div>
+                    <!-- /partner__slider -->
+
+                </div>
+                <!-- site__wrap -->
+
+            </div>
+            <!-- /partner -->
 
         </div>
         <!-- /site__content -->
@@ -115,6 +457,75 @@
         <footer class="site__footer">
             <!-- /site__footer-layout -->
             <div class="site__footer-layout">
+
+                <div class="copyright">
+                    © Все права защищены.
+                    ООО «Евразийский
+                    сертификационный центр», 2015.
+                </div>
+
+                <!-- phones -->
+                <dl class="phones">
+                    <dt><span>Москва</span></dt>
+                    <dd>+7 (495) 374-94-72</dd>
+                    <dt><span>Самара</span></dt>
+                    <dd>+7 (495) 374-94-72</dd>
+                    <dt><span>Новосибирск</span></dt>
+                    <dd>+7 (495) 374-94-72</dd>
+                    <dt><span>Москва</span></dt>
+                    <dd>+7 (495) 374-94-72</dd>
+                    <dt><span>Самара</span></dt>
+                    <dd>+7 (495) 374-94-72</dd>
+                    <dt><span>Новосибирск</span></dt>
+                    <dd>+7 (495) 374-94-72</dd>
+                    <dt><span>Москва</span></dt>
+                    <dd>+7 (495) 374-94-72</dd>
+                    <dt><span>Самара</span></dt>
+                    <dd>+7 (495) 374-94-72</dd>
+                    <dt><span>Новосибирск</span></dt>
+                    <dd>+7 (495) 374-94-72</dd>
+                </dl>
+                <!-- /phones -->
+
+                <dl>
+                    <dt>Сертификация По видам</dt>
+                    <dd>
+                        <a href="#">Подтверждение соответствия ТР ТС</a>
+                        <a href="#">Системы менеджмента качества ISO</a>
+                        <a href="#">Пожарная безопасность</a>
+                        <a href="#">Промышленная безопасность</a>
+                        <a href="#">Охрана труда</a>
+                    </dd>
+                </dl>
+
+                <dl>
+                    <dt>Сертификация По отраслям</dt>
+                    <dd>
+                        <a href="#">Оборудование, работающее под избыточным давлением</a>
+                        <a href="#">Автомобильный бензин и дизель, топочный мазут и судовое топливо</a>
+                        <a href="#">Косметическая и парфюмерная продукция</a>
+                        <a href="#">Смазочные масла и материалы</a>
+                        <a href="#">Средства индивидуальной защиты</a>
+                        <a href="#">Аппараты, работающие на газообразном топливе</a>
+                        <a href="#">Трактора, их прицепы и компоненты</a>
+                        <a href="#">Электроника и электротехника, ЭМС</a>
+                        <a href="#">Медицинское оборудование (свидетельство Росздравнадзора, декларация ГОСТ Р)</a>
+
+                        <a href="#">Транспортные средства (ОТТС) и их компоненты</a>
+                        <a href="#">Бытовая химия</a>
+                        <a href="#">Продукция легкой промышленности</a>
+                        <a href="#">Игрушки</a>
+                        <a href="#">Машины и оборудование</a>
+                        <a href="#">Лифты, эскалаторы</a>
+                        <a href="#">Табачная продукция</a>
+                        <a href="#">Пищевая продукция</a>
+                        <a href="#">Продукция для детей и подростков</a>
+                        <a href="#">Мебель для детей и взрослых, общественных и специальных учреждения</a>
+                        <a href="#">Государственная регистрация</a>
+                    </dd>
+                </dl>
+
+                Разработка сайта — «Экспресс лаб»
 
             </div>
             <!-- /site__footer-layout -->

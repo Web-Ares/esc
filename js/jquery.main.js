@@ -4,6 +4,10 @@ $(function(){
         Slider($(this));
     });
 
+    $('.tabs').each(function() {
+        Tabs($(this));
+    });
+
     var myMap;
 
     function init () {
@@ -22,7 +26,7 @@ $(function(){
 
     }
 
-    ymaps.ready(init);
+    //ymaps.ready(init);
 
     $('.map__item span').on({
         'click':function(){
@@ -108,7 +112,16 @@ var Slider = function (obj) {
             loop: true,
             nextButton: _next,
             prevButton: _prev,
+            pagination: _paginator,
             paginationClickable: true
+        });
+    }
+    if (_obj.hasClass('partner__slider')) {
+        var _swiper = new Swiper(_obj, {
+            slidesPerView: 5,
+            loop: true,
+            nextButton: _next,
+            prevButton: _prev,
         });
     }
 

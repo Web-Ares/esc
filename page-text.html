@@ -20,19 +20,35 @@
     <header class="site__header">
 
         <!-- header-navigation -->
-        <div class="header-navigation">
+        <nav class="header-navigation">
 
             <!-- header-navigation__layout -->
-            <div class="header-navigation__layout">
-                <a href="#">О компании</a>
-                <a href="#">Сотрудничество</a>
-                <a href="#">Справка</a>
-                <a href="#">Статьи и новости</a>
-                <a href="#">Контакты</a>
-            </div>
+            <ul class="header-navigation__layout">
+                <li class="header-navigation__sub">
+                    <a href="#">О компании</a>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Пункт №1</a></li>
+                        <li><a href="#">Пункт №2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Сотрудничество</a></li>
+                <li class="header-navigation__sub">
+                    <a href="#">Справка</a>
+                    <ul>
+                        <li><a href="#">Справочная информация</a></li>
+                        <li><a href="#">Вопрос-ответ</a></li>
+                        <li><a href="#">Стоимость работ</a></li>
+                        <li><a href="#">Пункт №1</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Статьи и новости</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
             <!-- /header-navigation__layout -->
 
-        </div>
+        </nav>
         <!-- /header-navigation -->
 
         <!-- site__header-layout -->
@@ -40,14 +56,14 @@
 
             <!-- logo -->
             <h1 class="logo">
-                <img src="img/logo.png" width="" height="" alt="">
+                <img src="img/logo.png" alt="Eurasian Certification Center"/>
             </h1>
             <!-- /logo -->
 
             <!-- callback -->
             <div class="callback">
                 <a href="tel:+7 (495) 374-94-72" class="callback__phone">+7 (495) 374-94-72</a>
-                <a href="#">Заказать звонок</a>
+                <a href="#" class="callback__btn">Заказать звонок</a>
             </div>
             <!-- /callback -->
 
@@ -75,10 +91,69 @@
         <!-- /site__header-layout -->
 
         <!-- header__menu -->
-        <nav class="header__menu">
-            <a href="#"></a>
-        </nav>
+        <div class="header__menu tabs">
+
+            <!-- header__menu-layout -->
+            <div class="header__menu-layout">
+
+                <!-- statistic__tabs -->
+                <div class="header__menu-tabs tabs__links">
+                    <a href="#">По видам</a>
+                    <a href="#">По отраслям</a>
+                </div>
+                <!-- statistic__tabs -->
+
+                <!-- search -->
+                <div class="search">
+                    <input type="search" name="search__text" class="search__text" id="search__text" placeholder="Поиск на сайте"/>
+                    <button name="search__btn" class="search__btn"></button>
+                </div>
+                <!-- /search -->
+
+            </div>
+            <!-- statistic__tabs -->
+
+            <!-- header__menu-wrap -->
+            <div class="header__menu-wrap">
+
+                <!-- header__menu-layout -->
+                <div class="header__menu-layout">
+
+                    <!-- statistic__tabs -->
+                    <div class="statistic__tabs tabs__content">
+
+                        <div>
+
+                            <a href="#">Подтверждение соответствия ТР ТС</a>
+                            <a href="#">Системы менеджмента качества ISO</a>
+                            <a href="#">Пожарная безопасность</a>
+                            <a href="#">Промышленная безопасность</a>
+                            <a href="#">Охрана труда</a>
+                            <a href="#">Испытания</a>
+                            <a href="#">Экспертиза</a>
+                            <a href="#">Оценка</a>
+
+                        </div>
+
+                        <div>
+
+                            <a href="#">Подтверждение соответствия ТР ТС</a>
+                            <a href="#">Системы менеджмента качества ISO</a>
+
+                        </div>
+
+                    </div>
+                    <!-- statistic__tabs -->
+
+                </div>
+                <!-- /header__menu-layout -->
+
+            </div>
+            <!-- /header__menu-wrap -->
+
+        </div>
         <!-- /header__menu -->
+
     </header>
     <!-- /site__header -->
 
@@ -200,6 +275,7 @@
         <!-- /site__footer-layout -->
     </footer>
     <!-- /site__footer -->
+
 </div>
 <!-- /site -->
 <script src="js/jquery-2.1.3.min.js"></script>
