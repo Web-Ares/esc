@@ -8,8 +8,16 @@ $(function(){
         Map($(this));
     });
 
-    $('.tabs').each(function() {
+    $('.header__menu ').each(function() {
         Tabs($(this));
+    });
+
+    $('.articles').each(function() {
+        ArticlesTabs($(this));
+    });
+
+    $('.catalog ').each(function() {
+        TabsCatalog($(this));
     });
 
 } );
@@ -17,11 +25,10 @@ $(function(){
 var Tabs = function(obj) {
 
     //private properties
-    var _self = this,
-        _tabs = obj.find('.tabs__links > a'),
-        _wraps = obj.find('.tabs__content > div'),
-        _i = 0,
-        _obj = obj;
+    var _obj = obj,
+        _tabs = _obj.find('.tabs__links > a'),
+        _wraps = _obj.find('.tabs__content > div'),
+        i = 0;
 
     //private methods
     var _addEvents = function() {
@@ -35,12 +42,92 @@ var Tabs = function(obj) {
             showPages(0);
 
             _tabs.each(function(index, element) {
-                $(element).attr("data-page", _i);
-                _i++;
+                $(element).attr("data-page", i);
+                i++;
             });
 
             _tabs.click(function() {
                 showPages(parseInt($(this).attr("data-page")));
+                return false;
+            });
+        },
+        _init = function() {
+            _addEvents();
+        };
+
+    //public properties
+
+    //public methods
+
+    _init();
+};
+
+var ArticlesTabs = function(obj) {
+
+    //private properties
+    var _obj = obj,
+        _tab = _obj.find('.articles__links > a'),
+        _wrap = _obj.find('.articles__content > div'),
+        _i = 0;
+
+    //private methods
+    var _addEvents = function() {
+            showTab = function(i) {
+                _wrap.hide().removeClass("active");
+                _wrap.eq(i).show(100).addClass('active');
+                _tab.removeClass("active");
+                _tab.eq(i).addClass("active");
+            };
+
+            showTab(_i);
+
+            _tab.each(function(index, element) {
+                $(element).attr("data-page", _i);
+                _i++;
+            });
+
+            _tab.click(function() {
+                showTab(parseInt($(this).attr("data-page")));
+                return false;
+            });
+        },
+        _init = function() {
+            _addEvents();
+        };
+
+    //public properties
+
+    //public methods
+
+    _init();
+};
+
+var TabsCatalog = function(obj) {
+    //private properties
+    var _obj = obj,
+        tabs = _obj.find('div a'),
+        wraps = _obj.find('.catalog__content > div'),
+        i = 0;
+
+    //private methods
+    var _addEvents = function() {
+            catalogPages = function(i) {
+                wraps.hide().removeClass("active");
+                wraps.eq(i).show(100).addClass('active');
+                tabs.removeClass("active");
+                tabs.eq(i).addClass("active");
+            };
+
+            catalogPages(0);
+
+            tabs.each(function(index, element) {
+                $(element).attr("data-page", i);
+                i++;
+            });
+
+            tabs.click(function() {
+                catalogPages(parseInt($(this).attr("data-page")));
+                return false;
             });
         },
         _init = function() {
@@ -129,10 +216,19 @@ var Slider = function (obj) {
             paginationClickable: true
 
         });
-
     }
     if (_obj.hasClass('promo__slider')) {
-        var _swiper = new Swiper(_obj, {
+        var _swiper2 = new Swiper(_obj, {
+            slidesPerView: 1,
+            loop: true,
+            nextButton: _next,
+            prevButton: _prev,
+            pagination: _paginator,
+            paginationClickable: true
+        });
+    }
+    if (_obj.hasClass('gratitude__swiper')) {
+        var _swiper3 = new Swiper(_obj, {
             slidesPerView: 1,
             loop: true,
             nextButton: _next,
@@ -142,11 +238,12 @@ var Slider = function (obj) {
         });
     }
     if (_obj.hasClass('partner__slider')) {
-        var _swiper = new Swiper(_obj, {
+        var _partnerswiper = new Swiper(_obj, {
             slidesPerView: 5,
+            spaceBetween: 13,
             loop: true,
             nextButton: _next,
-            prevButton: _prev,
+            prevButton: _prev
         });
     }
 
