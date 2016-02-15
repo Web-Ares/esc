@@ -8,7 +8,7 @@ $(function(){
         Map($(this));
     });
 
-    $('.header__menu ').each(function() {
+    $('.menu-list ').each(function() {
         Tabs($(this));
     });
 
