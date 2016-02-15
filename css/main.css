@@ -87,7 +87,7 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-bottom: 20px;
     z-index: 3;
 }
-.site__header-layout{
+.header-layout{
     position: relative;
     width: 1000px;
     height: 90px;
@@ -957,13 +957,13 @@ ul.advantages__list li{
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
 }
-.main-menu__layout > li{
+.main-menu__list > li{
     position: relative;
     display: inline-block;
     vertical-align: middle;
     margin-left: 21px;
 }
-.main-menu__layout li ul{
+.main-menu__list li ul{
     position: absolute;
     top: 100%;
     left: -20px;
@@ -977,7 +977,7 @@ ul.advantages__list li{
     transition: visibility .3s ease, opacity .3s ease;
     -webkit-transition: visibility .3s ease, opacity .3s ease;
 }
-.main-menu__layout li:hover ul{
+.main-menu__list li:hover ul{
     visibility: visible;
     opacity: 1;
 }
@@ -987,13 +987,13 @@ ul.advantages__list li{
     padding-top: 6px;
     color: #000;
 }
-.main-menu__layout li ul a{
+.main-menu__list li ul a{
     height: 20px;
 }
 .main-menu a:hover{
     text-decoration: underline;
 }
-.main-menu__layout{
+.main-menu__list{
     width: 1000px;
     margin: 0 auto;
 }
