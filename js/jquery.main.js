@@ -167,7 +167,7 @@ var Map = function(obj){
 
                 myMap.geoObjects.add(new ymaps.Placemark(
                     [coord[0], coord[1]],
-                    {   hintContent: "Описание",
+                    {   hintContent: "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ",
                         balloonContentBody: curElem.find('a').text() }, {
                         iconLayout: 'default#image',
                         iconImageOffset: [-15, -25]
@@ -232,9 +232,7 @@ var Slider = function (obj) {
             slidesPerView: 1,
             loop: true,
             nextButton: _next,
-            prevButton: _prev,
-            pagination: _paginator,
-            paginationClickable: true
+            prevButton: _prev
         });
     }
     if (_obj.hasClass('partner__slider')) {
